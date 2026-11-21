@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html
+    style="
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        height: 100%;
+    "
+>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Outstanding Payment Reminder – TELAH</title>
+    </head>
+    <body
+        style="
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: border-box;
+            height: 100%;
+        "
+    >
+        <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="100%"
+            style="background-color: #f4f7fb; padding: 40px 20px"
+        >
+            <tr>
+                <td align="center">
+                    <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="
+                            background: #ffffff;
+                            border-radius: 18px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                            width: 100%;
+                            max-width: 620px;
+                        "
+                    >
+                        <!-- Header -->
+                        <tr>
+                            <td style="background: #263564; padding: 32px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                >
+                                    <tr>
+                                        <td align="left">
+                                            <img
+                                                src="{{#if workspaceLogoUrl}}{{workspaceLogoUrl}}{{else}}{{BASE_URL}}/assets/images/telah-logo.png{{/if}}"
+                                                alt="{{propertyManagerName}}"
+                                                style="
+                                                    max-width: 190px;
+                                                    max-height: 45px;
+                                                    object-fit: contain;
+                                                    display: block;
+                                                    border: 0;
+                                                "
+                                            />
+                                        </td>
+                                        <td align="right">
+                                            <div
+                                                style="
+                                                    background: rgba(
+                                                        255,
+                                                        255,
+                                                        255,
+                                                        0.12
+                                                    );
+                                                    color: #ffffff;
+                                                    display: inline-block;
+                                                    padding: 10px 16px;
+                                                    border-radius: 30px;
+                                                    font-size: 13px;
+                                                    font-family: Arial,
+                                                        Helvetica, sans-serif;
+                                                "
+                                            >
+                                                Bill Reminder
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Content -->
+                        <tr>
+                            <td
+                                align="center"
+                                style="position: relative; width: 100%"
+                            >
+                                <table
+                                    border="0"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="div"
+                                    style="
+                                        border-collapse: separate;
+                                        padding: 24px;
+                                        width: 100%;
+                                        z-index: 1;
+                                        position: relative;
+                                        text-align: left;
+                                    "
+                                >
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <div
+                                                class="paragraph"
+                                                style="
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 18px;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    align-self: stretch;
+                                                    margin-top: -1px;
+                                                    font-family: 'Inter-SemiBold',
+                                                        Helvetica;
+                                                    font-weight: 600;
+                                                    color: #263564;
+                                                    text-align: center;
+                                                    line-height: 44px;
+                                                    position: relative;
+                                                    letter-spacing: 0;
+                                                    width: 100%;
+                                                "
+                                            >
+                                                OUTSTANDING PAYMENT REMINDER
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <p
+                                                class="p"
+                                                style="
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 16px;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    align-self: stretch;
+                                                    font-family: 'Inter-SemiBold',
+                                                        Helvetica;
+                                                    font-weight: 400;
+                                                    color: #333333;
+                                                    line-height: 44px;
+                                                    position: relative;
+                                                    letter-spacing: 0;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                <span
+                                                    class="text-wrapper"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-weight: 600;
+                                                    "
+                                                    >Hi, {{occupantName}},<br
+                                                        style="
+                                                            -webkit-font-smoothing: antialiased;
+                                                            box-sizing: border-box;
+                                                        "
+                                                /></span>
+                                                <span
+                                                    class="span"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-Regular',
+                                                            Helvetica;
+                                                    "
+                                                    >You have an outstanding
+                                                    bill at unit address
+                                                    {{unitAddress}},</span
+                                                >
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                class="frame-2"
+                                                style="
+                                                    border-collapse: separate;
+                                                    padding: 6px;
+                                                    border: 1px solid;
+                                                    font: inherit;
+                                                    font-size: 100%;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    background-color: #5fb9f912;
+                                                    border-radius: 18px;
+                                                    border-color: #60bafa33;
+                                                    position: relative;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                <tr style="height: 50%"></tr>
+                                                <tr>
+                                                    <td
+                                                        align="center"
+                                                        style="
+                                                            position: relative;
+                                                            width: 100%;
+                                                        "
+                                                    >
+                                                        <table
+                                                            border="0"
+                                                            cellpadding="0"
+                                                            cellspacing="0"
+                                                            class="paragraph-wrapper"
+                                                            style="
+                                                                border-collapse: separate;
+                                                                padding: 20px
+                                                                    50px;
+                                                                border: 0;
+                                                                font: inherit;
+                                                                font-size: 100%;
+                                                                -webkit-font-smoothing: antialiased;
+                                                                box-sizing: border-box;
+                                                                border-radius: 18px;
+                                                                position: relative;
+                                                                width: 100%;
+                                                                text-align: left;
+                                                                height: 0px;
+                                                            "
+                                                        >
+                                                            <tr
+                                                                style="
+                                                                    vertical-align: middle;
+                                                                "
+                                                            >
+                                                                <td
+                                                                    style="
+                                                                        padding: 0px;
+                                                                        width: 50%;
+                                                                    "
+                                                                ></td>
+                                                                <td
+                                                                    align="center"
+                                                                    style="
+                                                                        position: relative;
+                                                                        width: 193px;
+                                                                    "
+                                                                >
+                                                                    <div
+                                                                        class="paragraph-2"
+                                                                        style="
+                                                                            margin: 0;
+                                                                            padding: 0;
+                                                                            border: 0;
+                                                                            font: inherit;
+                                                                            font-size: 38px;
+                                                                            -webkit-font-smoothing: antialiased;
+                                                                            box-sizing: border-box;
+                                                                            width: 193px;
+                                                                            margin-top: -1px;
+                                                                            font-family: 'Inter-Bold',
+                                                                                Helvetica;
+                                                                            font-weight: 700;
+                                                                            color: #ab1c23;
+                                                                            line-height: 28px;
+                                                                            position: relative;
+                                                                            letter-spacing: 0;
+                                                                            text-align: center;
+                                                                        "
+                                                                    >
+                                                                        {{currency}}{{amount}}
+                                                                    </div>
+                                                                </td>
+                                                                <td
+                                                                    style="
+                                                                        padding: 0px;
+                                                                        width: 50%;
+                                                                    "
+                                                                ></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr style="height: 10px"></tr>
+                                                <tr style="height: 50%"></tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    {{#if lineItems}}
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                width="100%"
+                                                style="
+                                                    border-collapse: collapse;
+                                                    font-family: 'Inter-Regular',
+                                                        Helvetica, Arial,
+                                                        sans-serif;
+                                                "
+                                            >
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding: 0 0 10px;
+                                                            font-size: 12px;
+                                                            font-weight: 600;
+                                                            letter-spacing: 0.04em;
+                                                            color: #6b7280;
+                                                            border-bottom: 1px
+                                                                solid #e5e7eb;
+                                                            text-align: left;
+                                                        "
+                                                    >
+                                                        DESCRIPTION
+                                                    </td>
+                                                    <td
+                                                        style="
+                                                            padding: 0 0 10px;
+                                                            font-size: 12px;
+                                                            font-weight: 600;
+                                                            letter-spacing: 0.04em;
+                                                            color: #6b7280;
+                                                            border-bottom: 1px
+                                                                solid #e5e7eb;
+                                                            text-align: right;
+                                                        "
+                                                    >
+                                                        AMOUNT
+                                                    </td>
+                                                </tr>
+                                                {{#each lineItems}}
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding: 12px 0;
+                                                            font-size: 14px;
+                                                            color: #333333;
+                                                            border-bottom: 1px
+                                                                solid #f1f2f4;
+                                                            text-align: left;
+                                                        "
+                                                    >
+                                                        {{this.label}}
+                                                    </td>
+                                                    <td
+                                                        style="
+                                                            padding: 12px 0;
+                                                            font-size: 14px;
+                                                            color: #333333;
+                                                            border-bottom: 1px
+                                                                solid #f1f2f4;
+                                                            text-align: right;
+                                                        "
+                                                    >
+                                                        {{this.amount}}
+                                                    </td>
+                                                </tr>
+                                                {{/each}}
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    {{/if}}
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <p
+                                                class="paragraph-4"
+                                                style="
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 15px;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    position: relative;
+                                                    align-self: stretch;
+                                                    font-family: 'Inter-Regular',
+                                                        Helvetica;
+                                                    font-weight: 400;
+                                                    color: transparent;
+                                                    letter-spacing: 0;
+                                                    line-height: 28px;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                <span
+                                                    class="text-wrapper-2"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        color: #333333;
+                                                    "
+                                                    >Should you have any
+                                                    complaints, please reach out
+                                                    to
+                                                </span>
+                                                <span
+                                                    class="text-wrapper-3"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        color: #ab1c23;
+                                                    "
+                                                    >{{propertyManagerEmailAddress}}</span
+                                                >
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <p
+                                                class="paragraph-5"
+                                                style="
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 15px;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    align-self: stretch;
+                                                    font-family: 'Inter-Regular',
+                                                        Helvetica;
+                                                    font-weight: 400;
+                                                    color: #333333;
+                                                    line-height: 28px;
+                                                    position: relative;
+                                                    letter-spacing: 0;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                <span
+                                                    class="text-wrapper-4"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-Regular',
+                                                            Helvetica;
+                                                        font-weight: 400;
+                                                        color: #333333;
+                                                        font-size: 15px;
+                                                        letter-spacing: 0;
+                                                        line-height: 28px;
+                                                    "
+                                                    >For information on Bank
+                                                    Account Details to make
+                                                    payment; please go to your
+                                                </span>
+                                                <span
+                                                    class="text-wrapper-5"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-Medium',
+                                                            Helvetica;
+                                                        font-weight: 500;
+                                                    "
+                                                    >UNIT PLACE</span
+                                                >
+                                                <span
+                                                    class="text-wrapper-4"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-Regular',
+                                                            Helvetica;
+                                                        font-weight: 400;
+                                                        color: #333333;
+                                                        font-size: 15px;
+                                                        letter-spacing: 0;
+                                                        line-height: 28px;
+                                                    "
+                                                >
+                                                    on the TELAH Resident
+                                                    App</span
+                                                >
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <table
+                                                border="0"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                                class="frame-3"
+                                                style="
+                                                    border-collapse: separate;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 100%;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    position: relative;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                    height: 0px;
+                                                "
+                                            >
+                                                <tr
+                                                    style="
+                                                        vertical-align: middle;
+                                                    "
+                                                >
+                                                    <td
+                                                        style="
+                                                            padding: 0px;
+                                                            width: 50%;
+                                                        "
+                                                    ></td>
+                                                    <td
+                                                        align="center"
+                                                        style="
+                                                            position: relative;
+                                                            width: 162.5px;
+                                                            height: 57.5px;
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="https://apps.apple.com/us/app/telah/id1590376802"
+                                                            target="_blank"
+                                                            style="
+                                                                text-decoration: none;
+                                                            "
+                                                        >
+                                                            <img
+                                                                class="appstore"
+                                                                src="{{BASE_URL}}/assets/images/appstore.png"
+                                                                alt="Download on App Store"
+                                                                style="
+                                                                    margin: 0;
+                                                                    padding: 0;
+                                                                    border: 0;
+                                                                    font: inherit;
+                                                                    font-size: 100%;
+                                                                    -webkit-font-smoothing: antialiased;
+                                                                    box-sizing: border-box;
+                                                                    position: relative;
+                                                                    width: 162.5px;
+                                                                    height: 57.5px;
+                                                                    object-fit: cover;
+                                                                    text-align: left;
+                                                                "
+                                                            />
+                                                        </a>
+                                                    </td>
+                                                    <td
+                                                        style="
+                                                            width: 18px;
+                                                            min-width: 18px;
+                                                            padding: 0px;
+                                                        "
+                                                    ></td>
+                                                    <td
+                                                        align="center"
+                                                        style="
+                                                            position: relative;
+                                                            width: 185.5px;
+                                                            height: 57.5px;
+                                                        "
+                                                    >
+                                                        <a
+                                                            href="https://play.google.com/store/apps/details?id=ng.telah.resident"
+                                                            target="_blank"
+                                                            style="
+                                                                text-decoration: none;
+                                                            "
+                                                        >
+                                                            <img
+                                                                class="playstore"
+                                                                src="{{BASE_URL}}/assets/images/playstore.png"
+                                                                alt="Get it on Google Play"
+                                                                style="
+                                                                    margin: 0;
+                                                                    padding: 0;
+                                                                    border: 0;
+                                                                    font: inherit;
+                                                                    font-size: 100%;
+                                                                    -webkit-font-smoothing: antialiased;
+                                                                    box-sizing: border-box;
+                                                                    position: relative;
+                                                                    width: 185.5px;
+                                                                    height: 57.5px;
+                                                                    object-fit: cover;
+                                                                    text-align: left;
+                                                                "
+                                                            />
+                                                        </a>
+                                                    </td>
+                                                    <td
+                                                        style="
+                                                            padding: 0px;
+                                                            width: 50%;
+                                                        "
+                                                    ></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 20px"></tr>
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            style="
+                                                position: relative;
+                                                width: 100%;
+                                            "
+                                        >
+                                            <p
+                                                class="paragraph-5"
+                                                style="
+                                                    margin: 0;
+                                                    padding: 0;
+                                                    border: 0;
+                                                    font: inherit;
+                                                    font-size: 15px;
+                                                    -webkit-font-smoothing: antialiased;
+                                                    box-sizing: border-box;
+                                                    align-self: stretch;
+                                                    font-family: 'Inter-Regular',
+                                                        Helvetica;
+                                                    font-weight: 400;
+                                                    color: #333333;
+                                                    line-height: 28px;
+                                                    position: relative;
+                                                    letter-spacing: 0;
+                                                    width: 100%;
+                                                    text-align: left;
+                                                "
+                                            >
+                                                <span
+                                                    class="text-wrapper-4"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-Regular',
+                                                            Helvetica;
+                                                        font-weight: 400;
+                                                        color: #333333;
+                                                        font-size: 15px;
+                                                        letter-spacing: 0;
+                                                        line-height: 28px;
+                                                    "
+                                                    >Generated by TELAH for,<br
+                                                        style="
+                                                            -webkit-font-smoothing: antialiased;
+                                                            box-sizing: border-box;
+                                                        "
+                                                /></span>
+                                                <span
+                                                    class="text-wrapper-6"
+                                                    style="
+                                                        margin: 0;
+                                                        padding: 0;
+                                                        border: 0;
+                                                        font: inherit;
+                                                        font-size: 100%;
+                                                        -webkit-font-smoothing: antialiased;
+                                                        box-sizing: border-box;
+                                                        font-family: 'Inter-SemiBold',
+                                                            Helvetica;
+                                                        font-weight: 600;
+                                                    "
+                                                    >{{propertyManagerName}}</span
+                                                >
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 100%"></tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td style="background: #263564; padding: 30px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                >
+                                    <tr>
+                                        <td align="left">
+                                            <p
+                                                style="
+                                                    margin: 0;
+                                                    color: #ffffff;
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                    font-family: Arial,
+                                                        Helvetica, sans-serif;
+                                                "
+                                            >
+                                                TELAH Property Management
+                                            </p>
+                                            <p
+                                                style="
+                                                    margin: 8px 0 0;
+                                                    color: #94a3b8;
+                                                    font-size: 13px;
+                                                    line-height: 1.6;
+                                                    font-family: Arial,
+                                                        Helvetica, sans-serif;
+                                                "
+                                            >
+                                                Simplifying property operations
+                                                for estates, landlords,<br />
+                                                and developers across Africa.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

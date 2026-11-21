@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Maintenance Request Status Update</title>
+    </head>
+    <body
+        style="
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9;
+            font-family: Arial, Helvetica, sans-serif;
+        "
+    >
+        <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="background: #f4f6f9; padding: 30px 0"
+        >
+            <tr>
+                <td align="center">
+                    <table
+                        width="620"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="
+                            background: #ffffff;
+                            border-radius: 14px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                        "
+                    >
+                        <!-- Header -->
+                        <tr>
+                            <td style="background: #263564; padding: 32px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                >
+                                    <tr>
+                                        <td align="left">
+                                            <img
+                                                src="{{BASE_URL}}/assets/images/telah-logo.png"
+                                                alt="TELAH"
+                                                style="
+                                                    width: 190px;
+                                                    height: 45px;
+                                                    object-fit: cover;
+                                                    display: block;
+                                                    border: 0;
+                                                "
+                                            />
+                                        </td>
+                                        <td align="right">
+                                            <div
+                                                style="
+                                                    background: rgba(
+                                                        255,
+                                                        255,
+                                                        255,
+                                                        0.12
+                                                    );
+                                                    color: #ffffff;
+                                                    display: inline-block;
+                                                    padding: 10px 16px;
+                                                    border-radius: 30px;
+                                                    font-size: 13px;
+                                                "
+                                            >
+                                                Maintenance Update
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Body -->
+                        <tr>
+                            <td style="padding: 40px; color: #1e293b">
+                                <h2 style="margin-top: 0; font-size: 24px">
+                                    Maintenance Request Status Update
+                                </h2>
+
+                                <p style="font-size: 15px; line-height: 1.7">
+                                    Hello
+                                    <strong>{{propertyManagerName}}</strong>,
+                                </p>
+
+                                <p style="font-size: 15px; line-height: 1.7">
+                                    A maintenance request's status has changed.
+                                    See the details below.
+                                </p>
+
+                                <!-- Request Card -->
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    style="
+                                        margin: 30px 0;
+                                        background: #f8fafc;
+                                        border: 1px solid #e2e8f0;
+                                        border-radius: 12px;
+                                    "
+                                >
+                                    <tr>
+                                        <td style="padding: 25px">
+                                            <table
+                                                width="100%"
+                                                cellpadding="0"
+                                                cellspacing="0"
+                                            >
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-bottom: 12px;
+                                                        "
+                                                    >
+                                                        <span
+                                                            style="
+                                                                font-size: 13px;
+                                                                color: #64748b;
+                                                            "
+                                                            >Tenant Name</span
+                                                        ><br />
+                                                        <strong
+                                                            style="
+                                                                font-size: 16px;
+                                                            "
+                                                            >{{tenantName}}</strong
+                                                        >
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-bottom: 12px;
+                                                        "
+                                                    >
+                                                        <span
+                                                            style="
+                                                                font-size: 13px;
+                                                                color: #64748b;
+                                                            "
+                                                            >Property /
+                                                            Unit</span
+                                                        ><br />
+                                                        <strong
+                                                            style="
+                                                                font-size: 16px;
+                                                            "
+                                                            >{{propertyName}}
+                                                            &ndash;
+                                                            {{unitNumber}}</strong
+                                                        >
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-bottom: 12px;
+                                                        "
+                                                    >
+                                                        <span
+                                                            style="
+                                                                font-size: 13px;
+                                                                color: #64748b;
+                                                            "
+                                                            >Request Type</span
+                                                        ><br />
+                                                        <strong
+                                                            style="
+                                                                font-size: 16px;
+                                                            "
+                                                            >{{requestType}}</strong
+                                                        >
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <span
+                                                            style="
+                                                                font-size: 13px;
+                                                                color: #64748b;
+                                                            "
+                                                            >New Status</span
+                                                        ><br />
+                                                        <strong
+                                                            style="
+                                                                font-size: 16px;
+                                                                color: #ab1c23;
+                                                            "
+                                                            >{{status}}</strong
+                                                        >
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <p
+                                    style="
+                                        margin-top: 40px;
+                                        font-size: 14px;
+                                        color: #64748b;
+                                        line-height: 1.6;
+                                    "
+                                >
+                                    This is an automated notification from
+                                    TELAH.<br />
+                                    Please do not reply to this email.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td style="background: #263564; padding: 28px 40px">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <p
+                                                style="
+                                                    margin: 0;
+                                                    color: #ffffff;
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                "
+                                            >
+                                                TELAH Property Management
+                                            </p>
+                                            <p
+                                                style="
+                                                    margin: 8px 0 0;
+                                                    color: #94a3b8;
+                                                    font-size: 13px;
+                                                    line-height: 1.6;
+                                                "
+                                            >
+                                                Simplifying property operations
+                                                for estates, landlords, and
+                                                developers across Africa.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

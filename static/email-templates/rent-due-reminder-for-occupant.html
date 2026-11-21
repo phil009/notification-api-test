@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>TELAH Rent Due Reminder</title>
+    </head>
+
+    <body
+        style="
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+        "
+    >
+        <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="background-color: #f4f7fb; padding: 40px 0"
+        >
+            <tr>
+                <td align="center">
+                    <!-- Main Container -->
+                    <table
+                        width="620"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="
+                            background: #ffffff;
+                            border-radius: 18px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                        "
+                    >
+                        <!-- Header -->
+                        <tr>
+                            <td style="background: #263564; padding: 32px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                >
+                                    <tr>
+                                        <td align="left">
+                                            <img
+                                                src="{{BASE_URL}}/assets/images/telah-logo.png"
+                                                alt="TELAH"
+                                                style="
+                                                    width: 190px;
+                                                    height: 45px;
+                                                    object-fit: cover;
+                                                    display: block;
+                                                    border: 0;
+                                                "
+                                            />
+                                        </td>
+
+                                        <td align="right">
+                                            <div
+                                                style="
+                                                    background: rgba(
+                                                        255,
+                                                        255,
+                                                        255,
+                                                        0.12
+                                                    );
+                                                    color: #ffffff;
+                                                    display: inline-block;
+                                                    padding: 10px 16px;
+                                                    border-radius: 30px;
+                                                    font-size: 13px;
+                                                "
+                                            >
+                                                Rent Reminder
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Hero -->
+                        <tr>
+                            <td style="padding: 40px 40px 10px 40px">
+                                <h2
+                                    style="
+                                        margin: 0;
+                                        font-size: 30px;
+                                        color: #111827;
+                                    "
+                                >
+                                    Rent Due Reminder
+                                </h2>
+
+                                <p
+                                    style="
+                                        margin: 16px 0 0;
+                                        color: #4b5563;
+                                        font-size: 16px;
+                                        line-height: 1.7;
+                                    "
+                                >
+                                    Hi <strong>{{occupantName}}</strong>, this
+                                    is a reminder that your rent for
+                                    <strong>{{propertyName}}, Unit
+                                    {{unitNumber}}</strong> is due on
+                                    <strong>{{dueDate}}</strong> —
+                                    <strong>{{daysLeft}} day(s)</strong>
+                                    remaining. Kindly make your payment on time
+                                    to avoid any disruption to your tenancy.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Property Card -->
+                        <tr>
+                            <td style="padding: 20px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    style="
+                                        background: #f8fafc;
+                                        border: 1px solid #e5e7eb;
+                                        border-radius: 16px;
+                                    "
+                                >
+                                    <tr>
+                                        <td style="padding: 28px">
+                                            <table width="100%">
+                                                <tr>
+                                                    <td
+                                                        style="
+                                                            padding-bottom: 18px;
+                                                        "
+                                                    >
+                                                        <p
+                                                            style="
+                                                                margin: 0;
+                                                                font-size: 13px;
+                                                                color: #6b7280;
+                                                            "
+                                                        >
+                                                            PROPERTY
+                                                        </p>
+                                                        <h3
+                                                            style="
+                                                                margin: 6px 0 0;
+                                                                color: #111827;
+                                                                font-size: 22px;
+                                                            "
+                                                        >
+                                                            {{propertyName}}
+                                                        </h3>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%">
+                                                            <tr>
+                                                                <td
+                                                                    width="50%"
+                                                                    style="
+                                                                        padding-bottom: 18px;
+                                                                    "
+                                                                >
+                                                                    <p
+                                                                        style="
+                                                                            margin: 0;
+                                                                            font-size: 12px;
+                                                                            color: #6b7280;
+                                                                        "
+                                                                    >
+                                                                        UNIT
+                                                                    </p>
+                                                                    <p
+                                                                        style="
+                                                                            margin: 6px
+                                                                                0
+                                                                                0;
+                                                                            font-size: 16px;
+                                                                            color: #111827;
+                                                                        "
+                                                                    >
+                                                                        {{unitNumber}}
+                                                                    </p>
+                                                                </td>
+
+                                                                <td
+                                                                    width="50%"
+                                                                    style="
+                                                                        padding-bottom: 18px;
+                                                                    "
+                                                                >
+                                                                    <p
+                                                                        style="
+                                                                            margin: 0;
+                                                                            font-size: 12px;
+                                                                            color: #6b7280;
+                                                                        "
+                                                                    >
+                                                                        DUE DATE
+                                                                    </p>
+                                                                    <p
+                                                                        style="
+                                                                            margin: 6px
+                                                                                0
+                                                                                0;
+                                                                            font-size: 16px;
+                                                                            color: #ab1c23;
+                                                                            font-weight: bold;
+                                                                        "
+                                                                    >
+                                                                        {{dueDate}}
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td width="50%">
+                                                                    <p
+                                                                        style="
+                                                                            margin: 0;
+                                                                            font-size: 12px;
+                                                                            color: #6b7280;
+                                                                        "
+                                                                    >
+                                                                        DAYS
+                                                                        REMAINING
+                                                                    </p>
+                                                                    <p
+                                                                        style="
+                                                                            margin: 6px
+                                                                                0
+                                                                                0;
+                                                                            font-size: 16px;
+                                                                            color: #111827;
+                                                                            font-weight: bold;
+                                                                        "
+                                                                    >
+                                                                        {{daysLeft}}
+                                                                        Days
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <!-- <tr>
+                            <td
+                                align="center"
+                                style="padding: 20px 40px 40px"
+                            >
+                                <a
+                                    href="{{dashboardLink}}"
+                                    style="
+                                        display: inline-block;
+                                        background: #263564;
+                                        color: #ffffff;
+                                        text-decoration: none;
+                                        padding: 16px 34px;
+                                        border-radius: 12px;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                    "
+                                >
+                                    Manage Rent
+                                </a>
+                            </td>
+                        </tr> -->
+
+                        <!-- Footer -->
+                        <tr>
+                            <td style="background: #263564; padding: 30px 40px">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <p
+                                                style="
+                                                    margin: 0;
+                                                    color: #ffffff;
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                "
+                                            >
+                                                TELAH Property Management
+                                            </p>
+
+                                            <p
+                                                style="
+                                                    margin: 8px 0 0;
+                                                    color: #94a3b8;
+                                                    font-size: 13px;
+                                                    line-height: 1.6;
+                                                "
+                                            >
+                                                Simplifying property operations
+                                                for estates, landlords, and
+                                                developers across Africa.
+                                            </p>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

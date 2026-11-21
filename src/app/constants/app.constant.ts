@@ -1,0 +1,7 @@
+export const APP_NAME = 'notification-api';
+export const PLATFORM_ADMIN = 'PLATFORM_ADMIN';
+
+export const X_SECRET_KEY = 'X-SECRET-KEY';
+
+export const AUTHENTICATION_API_SECRET_KEY_NAME =
+    process.env.AUTHENTICATION_API_SECRET_KEY_NAME || 'AUTHENTICATION_API_SECRET_KEY';

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Monthly Portfolio Summary</title>
+    </head>
+    <body
+        style="
+            margin: 0;
+            padding: 0;
+            background: #f4f6f9;
+            font-family: Arial, Helvetica, sans-serif;
+        "
+    >
+        <table
+            width="100%"
+            cellpadding="0"
+            cellspacing="0"
+            style="background: #f4f6f9; padding: 30px 0"
+        >
+            <tr>
+                <td align="center">
+                    <table
+                        width="620"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="
+                            background: #ffffff;
+                            border-radius: 14px;
+                            overflow: hidden;
+                            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+                        "
+                    >
+                        <!-- Header -->
+                        <tr>
+                            <td style="background: #263564; padding: 32px 40px">
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                >
+                                    <tr>
+                                        <td align="left">
+                                            <img
+                                                src="{{BASE_URL}}/assets/images/telah-logo.png"
+                                                alt="TELAH"
+                                                style="
+                                                    width: 190px;
+                                                    height: 45px;
+                                                    object-fit: cover;
+                                                    display: block;
+                                                    border: 0;
+                                                "
+                                            />
+                                        </td>
+                                        <td align="right">
+                                            <div
+                                                style="
+                                                    background: rgba(
+                                                        255,
+                                                        255,
+                                                        255,
+                                                        0.12
+                                                    );
+                                                    color: #ffffff;
+                                                    display: inline-block;
+                                                    padding: 10px 16px;
+                                                    border-radius: 30px;
+                                                    font-size: 13px;
+                                                "
+                                            >
+                                                Monthly Summary
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Body -->
+                        <tr>
+                            <td style="padding: 40px; color: #1e293b">
+                                <h2 style="margin-top: 0; font-size: 24px">
+                                    Portfolio Summary &ndash; {{monthLabel}}
+                                </h2>
+
+                                <p style="font-size: 15px; line-height: 1.7">
+                                    Hello
+                                    <strong>{{propertyManagerName}}</strong>,
+                                    here is how your portfolio looked at the end
+                                    of {{monthLabel}}.
+                                </p>
+
+                                <!-- Stats -->
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="8"
+                                    style="margin: 24px -8px"
+                                >
+                                    <tr>
+                                        <td
+                                            align="center"
+                                            width="25%"
+                                            style="
+                                                background: #f8fafc;
+                                                border: 1px solid #e2e8f0;
+                                                border-radius: 12px;
+                                                padding: 16px 8px;
+                                            "
+                                        >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 12px;
+                                                    color: #64748b;
+                                                "
+                                                >Total Units</span
+                                            >
+                                            <strong style="font-size: 22px"
+                                                >{{totalUnits}}</strong
+                                            >
+                                        </td>
+                                        <td
+                                            align="center"
+                                            width="25%"
+                                            style="
+                                                background: #f8fafc;
+                                                border: 1px solid #e2e8f0;
+                                                border-radius: 12px;
+                                                padding: 16px 8px;
+                                            "
+                                        >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 12px;
+                                                    color: #64748b;
+                                                "
+                                                >Occupied</span
+                                            >
+                                            <strong style="font-size: 22px"
+                                                >{{occupiedUnits}}</strong
+                                            >
+                                        </td>
+                                        <td
+                                            align="center"
+                                            width="25%"
+                                            style="
+                                                background: #f8fafc;
+                                                border: 1px solid #e2e8f0;
+                                                border-radius: 12px;
+                                                padding: 16px 8px;
+                                            "
+                                        >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 12px;
+                                                    color: #64748b;
+                                                "
+                                                >Vacant</span
+                                            >
+                                            <strong style="font-size: 22px"
+                                                >{{vacantUnits}}</strong
+                                            >
+                                        </td>
+                                        <td
+                                            align="center"
+                                            width="25%"
+                                            style="
+                                                background: #f8fafc;
+                                                border: 1px solid #e2e8f0;
+                                                border-radius: 12px;
+                                                padding: 16px 8px;
+                                            "
+                                        >
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 12px;
+                                                    color: #64748b;
+                                                "
+                                                >Occupancy</span
+                                            >
+                                            <strong style="font-size: 22px"
+                                                >{{occupancyRate}}</strong
+                                            >
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <!-- Rent collected -->
+                                {{#if hasRentCollected}}
+                                <table
+                                    width="100%"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    style="margin: 24px 0"
+                                >
+                                    <tr>
+                                        <td align="center">
+                                            <span
+                                                style="
+                                                    display: block;
+                                                    font-size: 13px;
+                                                    color: #64748b;
+                                                    margin-bottom: 6px;
+                                                "
+                                                >Rent Collected in
+                                                {{monthLabel}}</span
+                                            >
+                                            {{#each rentCollected}}
+                                            <strong
+                                                style="
+                                                    display: block;
+                                                    font-size: 30px;
+                                                    color: #ab1c23;
+                                                "
+                                                >{{this}}</strong
+                                            >
+                                            {{/each}}
+                                        </td>
+                                    </tr>
+                                </table>
+                                {{/if}}
+
+                                <!-- Expiring soon -->
+                                <h3 style="margin: 32px 0 8px; font-size: 18px">
+                                    Expiring Within 90 Days ({{expiringCount}})
+                                </h3>
+                                {{#if expiringCount}}
+                                <table
+                                    width="100%"
+                                    cellpadding="8"
+                                    cellspacing="0"
+                                    style="
+                                        font-size: 14px;
+                                        border-collapse: collapse;
+                                    "
+                                >
+                                    <tr
+                                        style="
+                                            background: #f8fafc;
+                                            color: #64748b;
+                                        "
+                                    >
+                                        <td>Unit</td>
+                                        <td>Tenant</td>
+                                        <td>Ends</td>
+                                        <td align="right">Days Left</td>
+                                    </tr>
+                                    {{#each expiring}}
+                                    <tr style="border-top: 1px solid #e2e8f0">
+                                        <td>{{unit}}</td>
+                                        <td>{{tenantName}}</td>
+                                        <td>{{endDate}}</td>
+                                        <td align="right">{{daysLeft}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </table>
+                                {{#if expiringMore}}
+                                <p style="font-size: 13px; color: #64748b">
+                                    and {{expiringMore}} more
+                                </p>
+                                {{/if}} {{else}}
+                                <p style="font-size: 14px; color: #64748b">
+                                    No tenancies are expiring in this period.
+                                </p>
+                                {{/if}}
+
+                                <!-- Vacant -->
+                                <h3 style="margin: 32px 0 8px; font-size: 18px">
+                                    Vacant Units ({{vacantCount}})
+                                </h3>
+                                {{#if vacantCount}}
+                                <table
+                                    width="100%"
+                                    cellpadding="8"
+                                    cellspacing="0"
+                                    style="
+                                        font-size: 14px;
+                                        border-collapse: collapse;
+                                    "
+                                >
+                                    <tr
+                                        style="
+                                            background: #f8fafc;
+                                            color: #64748b;
+                                        "
+                                    >
+                                        <td>Unit</td>
+                                    </tr>
+                                    {{#each vacant}}
+                                    <tr style="border-top: 1px solid #e2e8f0">
+                                        <td>{{unit}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </table>
+                                {{#if vacantMore}}
+                                <p style="font-size: 13px; color: #64748b">
+                                    and {{vacantMore}} more
+                                </p>
+                                {{/if}} {{else}}
+                                <p style="font-size: 14px; color: #64748b">
+                                    Every unit is currently occupied.
+                                </p>
+                                {{/if}}
+
+                                <!-- Debtors -->
+                                <h3 style="margin: 32px 0 8px; font-size: 18px">
+                                    Tenants With Overdue Payments
+                                    ({{debtorCount}})
+                                </h3>
+                                {{#if debtorCount}}
+                                <table
+                                    width="100%"
+                                    cellpadding="8"
+                                    cellspacing="0"
+                                    style="
+                                        font-size: 14px;
+                                        border-collapse: collapse;
+                                    "
+                                >
+                                    <tr
+                                        style="
+                                            background: #f8fafc;
+                                            color: #64748b;
+                                        "
+                                    >
+                                        <td>Tenant</td>
+                                        <td align="right">Overdue</td>
+                                        <td align="right">Days</td>
+                                    </tr>
+                                    {{#each debtors}}
+                                    <tr style="border-top: 1px solid #e2e8f0">
+                                        <td>{{tenantName}}</td>
+                                        <td
+                                            align="right"
+                                            style="color: #ab1c23"
+                                        >
+                                            {{amount}}
+                                        </td>
+                                        <td align="right">{{daysOverdue}}</td>
+                                    </tr>
+                                    {{/each}}
+                                </table>
+                                {{#if debtorsMore}}
+                                <p style="font-size: 13px; color: #64748b">
+                                    and {{debtorsMore}} more
+                                </p>
+                                {{/if}} {{else}}
+                                <p style="font-size: 14px; color: #64748b">
+                                    No tenants have overdue payments.
+                                </p>
+                                {{/if}}
+
+                                <p
+                                    style="
+                                        margin-top: 40px;
+                                        font-size: 14px;
+                                        color: #64748b;
+                                        line-height: 1.6;
+                                    "
+                                >
+                                    This is an automated notification from
+                                    TELAH.<br />
+                                    Please do not reply to this email.
+                                </p>
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td style="background: #263564; padding: 28px 40px">
+                                <table width="100%">
+                                    <tr>
+                                        <td align="left">
+                                            <p
+                                                style="
+                                                    margin: 0;
+                                                    color: #ffffff;
+                                                    font-size: 15px;
+                                                    font-weight: bold;
+                                                "
+                                            >
+                                                TELAH Property Management
+                                            </p>
+                                            <p
+                                                style="
+                                                    margin: 8px 0 0;
+                                                    color: #94a3b8;
+                                                    font-size: 13px;
+                                                    line-height: 1.6;
+                                                "
+                                            >
+                                                Simplifying property operations
+                                                for estates, landlords, and
+                                                developers across Africa.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
