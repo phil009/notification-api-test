@@ -20,7 +20,6 @@ sdk/
 .docker*/
 openapi.json
 *docker-compose.yaml
-Dockerfile
 
 temp/
 test/outputs/
